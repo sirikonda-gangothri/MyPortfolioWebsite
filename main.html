@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <header>
+        <div class="name">Gangothri</div>
+        <div class="menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#more" onclick="toggleMoreSection(event)">More</a></li>
+        </div>
+    </header>
+    <main>
+        <section class="home" id="home">
+            <div class="home-content">
+                <div class="home-text">
+                    <div id="message-box">Loading...</div>
+                    <p>Hi, I'm <span class="nme">Sirikonda Gangothri</span></p>
+                    <p>From Hyderabad</p>
+                    <div class="home-buttons">
+                        <a href="#contact" class="contact-btn">Contact Me</a>
+                    </div>
+                </div>
+                <div class="home-image">
+                    <img src="./assets/Imge.jpg" width="300" alt="Gangothri">
+                </div>
+            </div>
+            <script>
+                const messages=["Student at VNRVJIET","Web developer","Programmer"];
+                let index=1;
+                const box=document.getElementById("message-box");
+                function showNextMessage(){
+                    box.style.opacity=0;
+                    setTimeout(()=>{
+                        box.textContent=messages[index];
+                        box.style.opacity=1;
+                        index=(index+1)%messages.length;
+                    },1000);
+                }
+                box.textContent=messages[0];
+                setInterval(showNextMessage,2500);
+            </script>
+        </section>
+        <section id="about">
+            <div class="about-container">
+                <h1 class="section-title">About Me</h1>
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="./assets/Imge.jpg" alt="Gangothri">
+                    </div>
+                    <div class="about-text">
+                        <div class="about-divider">
+                            <span>Passionate Developer & Problem Solver</span>
+                        </div>
+                        <p>I'm a motivated B.Tech IT student with strong skills in Data Structures, Full-Stack Web Development, and Machine Learning. I've built real-world projects using these technologies.</p>
+                        <p>Proficient in C++, Java, Python, JavaScript, Flask, HTML/CSS, and tools like Bootstrap and pandas. I'm known for my adaptability, logical thinking, and initiative. Currently seeking a full-time Software Engineer role to contribute to impactful tech solutions and grow in a dynamic environment.</p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number">8.97</span><br>
+                                <span class="stat-label">CGPA</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">15</span><br>
+                                <span class="stat-label">PROJECTS</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number">2</span>
+                                <span class="stat-label">CERTIFICATIONS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="academics">
+            <div class="academics-container">
+                <h1 class="section-title">Academics</h1>
+                <div class="academic-path">
+                    <div class="path-line"></div>
+                    <div class="academic-milestone">
+                        <div class="milestone-card left">
+                            <h3>B.Tech in Information Technology</h3>
+                            <p>VNR Vignan Jyothi Institute of Engineering & Technology</p>
+                            <p>2022 - 2026 | CGPA: 9.01</p>
+                            <span class="academic-badge">Current</span>
+                        </div>
+                        <div class="milestone-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                    </div>
+                    <div class="academic-milestone">
+                        <div class="milestone-icon">
+                            <i class="fas fa-school"></i>
+                        </div>
+                        <div class="milestone-card right">
+                            <h3>Class XII</h3>
+                            <p>Narayana Junior College, Hyderabad</p>
+                            <p>2020 - 2022 | Percentage: 98.8%</p>
+                            <span class="academic-badge">Excellent</span>
+                        </div>
+                    </div>
+                    <div class="academic-milestone">
+                        <div class="milestone-card left">
+                            <h3>Class X</h3>
+                            <p>Sadhana High School</p>
+                            <p>2020 | Grade: 10.0</p>
+                            <span class="academic-badge">Perfect</span>
+                        </div>
+                        <div class="milestone-icon">
+                            <i class="fas fa-award"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h1 class="section-title">Skills</h1>
+            <div class="services-container">
+                <div class="service-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Programming Languages</h3>
+                    <p>C, C++, Python, Java</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Database</h3>
+                    <p>SQL, MongoDB</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-globe"></i>
+                    <h3>Web Development</h3>
+                    <p>HTML, CSS, JavaScript, React, Node.js</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-cubes"></i>
+                    <h3>OOPS</h3>
+                    <p>Object-Oriented Programming</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Data Structures & Algorithms</h3>
+                    <p>Core DSA, Logical Problem Solving</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>CS Fundamentals</h3>
+                    <p>OS, DBMS, Computer Networks</p>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h1 class="section-title">My Projects</h1>
+            <div class="projects-container">
+                <a class="project-card"
+                   href="https://github.com/sirikonda-gangothri/NATS-Network-Analyzer-and-Threat-Scanner.git"
+                   target="_blank"
+                   aria-label="NATS-Network Analyzer&Threat Scanner GitHub">
+                    <div class="project-badge">NATS-Network Analyzer&Threat Scanner</div>
+                    <img src="./assets/NATS.png" alt="NATS">
+                    <div class="card-content">
+                        <h2>NATS-Network Analyzer&Threat Scanner</h2>
+                        <p>NATS-Network Analyzer&Threat Scanner is an advanced developer tool designed to facilitate real-time network traffic monitoring, analysis, and visualization within a unified web platform. Built on Flask, it integrates machine learning models to predict traffic types and detect security threats efficiently.</p>
+                        <span class="card-link-icon"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a class="project-card"
+                   href="https://github.com/sirikonda-gangothri/Password_Generator.git"
+                   target="_blank"
+                   aria-label="Password Generator GitHub">
+                    <div class="project-badge">Password Generator</div>
+                    <img src="https://media.istockphoto.com/id/1323750559/vector/data-protection-concept-protecting-personal-data-files-with-safe-password-on-phone-concept.jpg?s=612x612&w=0&k=20&c=ViQxL-Qm98DQMueSXiwf3jVFPQviVO7C7PO5afKW2GI=" alt="App 2">
+                    <div class="card-content">
+                        <h2>Password Generator</h2>
+                        <p>Password Generator is a simple yet effective tool for generating secure passwords. It allows users to customize their password requirements, ensuring a perfect balance between security and memorability.</p>
+                        <span class="card-link-icon"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+                <a class="project-card"
+                   href="https://github.com/sirikonda-gangothri/FlightReservationSystem.git"
+                   target="_blank"
+                   aria-label="Flight Reservation System GitHub">
+                    <div class="project-badge">Flight Reservation System</div>
+                    <img src="https://media.istockphoto.com/id/1133469114/vector/businessman-booking-flight-tickets-vector-concept.jpg?s=612x612&w=0&k=20&c=VJJNy0ajrztJlMTW-2EWSrwiHVbE1qVJ5H-BFfbaS1U=" alt="FlightReservationSystem">
+                    <div class="card-content">
+                        <h2>Flight Reservation System</h2>
+                        <p>A dynamic text-based flight reservation application designed for efficient seat management and booking operations. Built using Binary Search Tree (BST) for optimal performance in data handling and quick seat lookup.</p>
+                        <span class="card-link-icon"><i class="fas fa-external-link-alt"></i></span>
+                    </div>
+                </a>
+            </div>
+        </section>
+        <section id="certifications">
+            <h1 class="section-title">Certifications</h1>
+            <div class="certification-list">
+                <div class="certification-item">
+                    <h3>Infosys Springboard</h3>
+                    <p>Certified in <strong>MySQL – SQL and Database Testing</strong></p>
+                </div>
+                <div class="certification-item">
+                    <h3>Scaler Academy</h3>
+                    <p>Certified in <strong>Python Programming Course</strong></p>
+                </div>
+            </div>
+        </section>
+        <section id="resume">
+            <h1 class="section-title">Resume</h1>
+            <div class="resume-download-section">
+                <h2>Download My Resume</h2>
+                <p>Get a comprehensive overview of my skills, experience, and achievements.</p>
+                <div class="resume-buttons">
+                    <a href="./assets/Resume.pdf" target="_blank" class="resume-btn">
+                        <i class="fas fa-eye"></i> Preview Resume
+                    </a>
+                    <a href="./assets/Resume.pdf" download class="resume-btn">
+                        <i class="fas fa-download"></i> Download PDF
+                    </a>
+                </div>
+            </div>
+        </section>        
+        <div class="explore-more-wrapper">
+            <button class="explore-more-btn" onclick="toggleMoreSection()">
+                Explore More <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+
+        <section id="more" class="more-section">
+            <h2 class="more-title" data-toggle="+"
+        onclick="toggleMoreSection()">Achievements & More</h2>
+            <div class="more-content">
+                <div class="more-block">
+                    <h3><i class="fas fa-trophy"></i>Achievements & Participations</h3>
+                    <ul>
+                        <li>Actively participated in WCC 3.0 and 4.0 coding contests by ACM VNRVJIET</li>
+                        <li>Finalist in InnoVision 2K24 by Gamma Club, VNRVJIET</li>
+                        <li>Participated in Smart India Hackathon 2023</li>
+                    </ul>
+                </div>
+                <div class="more-block">
+                    <h3><i class="fas fa-chalkboard-teacher"></i>Co-Curricular Activities</h3>
+                    <ul>
+                        <li>Participated in Deep Learning Seminar by ACM VNRVJIET</li>
+                        <li>Attended Tech360, PySpace, and more by ACM Student Chapter</li>
+                        <li>Regional 1st in TS Chekumuki Science Talent Test (2019)</li>
+                    </ul>
+                </div>
+                <div class="more-block">
+                    <h3><i class="fas fa-users"></i>Extra-Curricular Activities</h3>
+                    <ul>
+                        <li>Technical Team Volunteer & ACM VNRVJIET Member</li>
+                        <li>Member of Street Cause</li>
+                    </ul>
+                </div>
+                <div class="more-block">
+                    <h3><i class="fas fa-star"></i>Strengths</h3>
+                    <ul>
+                        <li>Communication</li>
+                        <li>Problem Solving</li>
+                        <li>Teamwork</li>
+                        <li>Organised</li>
+                    </ul>
+                </div>
+                <div class="more-block">
+                    <h3><i class="fas fa-heart"></i>Hobbies</h3>
+                    <ul>
+                        <li>Drawing</li>
+                        <li>Making Crafts</li>
+                        <li>Solving Sudoku</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        <section id="contact">
+            <h1 class="section-title">Contact Me</h1>
+            <div class="contact-icons">
+                <a href="mailto:sirikondagangothri186@gmail.com" class="contact-icon" title="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/sirikonda-gangothri-59418425b" class="contact-icon" title="LinkedIn" target="_blank">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/sirikonda-gangothri" class="contact-icon" title="GitHub" target="_blank">
+                    <i class="fab fa-github"></i>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Sirikonda Gangothri. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+// Add this to your existing JavaScript
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = document.querySelectorAll('section, .home');
+    const menuItems = document.querySelectorAll('.menu li a');
+    
+    function onScroll() {
+        let current = '';
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            
+            if (pageYOffset >= (sectionTop - 300)) {
+                current = section.getAttribute('id');
+            }
+        });
+        
+        menuItems.forEach(item => {
+            item.classList.remove('active');
+            if (item.getAttribute('href') === `#${current}`) {
+                item.classList.add('active');
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', onScroll);
+    onScroll(); // Call once to set initial state
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        const targetId = this.getAttribute('href');
+        if (!targetId || targetId === '#') return;
+
+        const targetElement = document.querySelector(targetId);
+        if (targetId === '#more') {
+            toggleMoreSection();
+            e.preventDefault();
+            return;
+        }
+
+        if (targetElement) {
+            e.preventDefault();
+
+            window.scrollTo({
+                top: targetElement.offsetTop - 60,
+                behavior: 'smooth'
+            });
+
+            // Optional: update active class only for navbar links
+            document.querySelectorAll('.menu li a').forEach(item => {
+                item.classList.remove('active');
+                if (item.getAttribute('href') === targetId) {
+                    item.classList.add('active');
+                }
+            });
+        }
+    });
+});
+
+function toggleMoreSection(event) {
+    if (event) event.preventDefault(); // Prevent default anchor scroll
+    const section = document.getElementById("more");
+    const isActive = section.classList.contains("active");
+    const title = section.querySelector(".more-title");
+
+    if (isActive) {
+        section.classList.remove("active");
+        title.setAttribute('data-toggle', '+');
+    } else {
+        section.classList.add("active");
+        title.setAttribute('data-toggle', '-');
+        setTimeout(() => {
+            section.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 200);
+    }
+}
+
+        // Counter animation for stats - exact match to provided effect
+        function animateCounters() {
+        const counters = document.querySelectorAll(".stat-number");
+
+        counters.forEach((counter) => {
+            const target = Number.parseFloat(counter.textContent);
+            const increment = target / 100;
+            let current = 0;
+
+            const updateCounter = () => {
+            if (current < target) {
+                current += increment;
+                if (counter.textContent.includes(".")) {
+                counter.textContent = current.toFixed(2);
+                } else {
+                counter.textContent = Math.ceil(current);
+                }
+                setTimeout(updateCounter, 20);
+            } else {
+                counter.textContent = target;
+            }
+            };
+
+            // Start animation when element is visible
+            const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                updateCounter();
+                observer.unobserve(entry.target);
+                }
+            });
+            });
+
+            observer.observe(counter);
+        });
+        }
+        // Initialize counter animation
+        document.addEventListener("DOMContentLoaded", animateCounters);
+    </script>
+    <script>
+document.addEventListener('DOMContentLoaded', function() {
+    var moreNav = document.querySelector('.menu li a[href="#more"]');
+    var moreSection = document.getElementById('more');
+    var moreTitle = moreSection ? moreSection.querySelector('.more-title') : null;
+    if (moreNav && moreSection) {
+        moreNav.addEventListener('click', function(e) {
+            e.preventDefault();
+            moreSection.classList.toggle('active');
+            if (moreTitle) {
+                moreTitle.setAttribute('data-toggle', moreSection.classList.contains('active') ? '-' : '+');
+            }
+            setTimeout(function() {
+                moreSection.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+            }, 200);
+        });
+    }
+});
+</script>
+</body>
+</html>
